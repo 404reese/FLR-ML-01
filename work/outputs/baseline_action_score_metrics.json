@@ -1,0 +1,19 @@
+{
+  "rows": 30000,
+  "base_decline_rate": 0.5420666666666667,
+  "precision_at_10": 0.7,
+  "precision_at_20": 0.6,
+  "precision_at_50": 0.68,
+  "precision_at_100": 0.71,
+  "queue_path": "work/outputs/baseline_action_score.csv",
+  "no_label_derived_inputs": [
+    "trend_direction",
+    "trend_pct",
+    "impressions_last_30d",
+    "clicks_last_30d",
+    "sessions_last_30d",
+    "impressions_prev_30d",
+    "clicks_prev_30d",
+    "sessions_prev_30d"
+  ]
+}
