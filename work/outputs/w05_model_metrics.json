@@ -1,0 +1,96 @@
+{
+  "random_state": 42,
+  "split": {
+    "strategy": "GroupShuffleSplit by client_id",
+    "train_rows": 22885,
+    "test_rows": 7115,
+    "train_clients": 24,
+    "test_clients": 8,
+    "test_base_rate": 0.516514406184118
+  },
+  "model_of_record": "logistic_regression",
+  "comparison": [
+    {
+      "method": "logistic_regression",
+      "test_base_rate": 0.516514406184118,
+      "precision_at_10": 0.9,
+      "precision_at_20": 0.75,
+      "precision_at_50": 0.76,
+      "precision_at_100": 0.7,
+      "average_precision": 0.6074251929479558,
+      "roc_auc": 0.611578547698149
+    },
+    {
+      "method": "random_forest_check",
+      "test_base_rate": 0.516514406184118,
+      "precision_at_10": 0.5,
+      "precision_at_20": 0.4,
+      "precision_at_50": 0.54,
+      "precision_at_100": 0.57,
+      "average_precision": 0.5902964578893123,
+      "roc_auc": 0.6050126957759848
+    },
+    {
+      "method": "week4_baseline_rule",
+      "test_base_rate": 0.516514406184118,
+      "precision_at_10": 0.8,
+      "precision_at_20": 0.65,
+      "precision_at_50": 0.42,
+      "precision_at_100": 0.54,
+      "average_precision": 0.5185869202518387,
+      "roc_auc": 0.5138528713811106
+    }
+  ],
+  "top_coefficients": [
+    {
+      "feature": "log_impressions_90d",
+      "coefficient": 1.2390799726551964
+    },
+    {
+      "feature": "has_position_data",
+      "coefficient": 0.9194903712962965
+    },
+    {
+      "feature": "impression_tier_low",
+      "coefficient": 0.690279549705567
+    },
+    {
+      "feature": "word_count_tier_1000-2000",
+      "coefficient": 0.6582106577625921
+    },
+    {
+      "feature": "log_clicks_90d",
+      "coefficient": -0.5544345107899994
+    },
+    {
+      "feature": "freshness_tier_31-90",
+      "coefficient": -0.5518324589275382
+    },
+    {
+      "feature": "impression_tier_excellent",
+      "coefficient": -0.46772110400573463
+    },
+    {
+      "feature": "avg_position",
+      "coefficient": -0.44438093163884257
+    },
+    {
+      "feature": "content_age_days",
+      "coefficient": -0.3714334065200016
+    },
+    {
+      "feature": "word_count",
+      "coefficient": 0.35169672704499616
+    },
+    {
+      "feature": "word_count_tier_2000-3500",
+      "coefficient": -0.3052926399475759
+    },
+    {
+      "feature": "freshness_tier_0-30",
+      "coefficient": 0.2508269692220287
+    }
+  ],
+  "forbidden_features_used": [],
+  "predictions_path": "work/outputs/w05_model_test_predictions.csv"
+}
