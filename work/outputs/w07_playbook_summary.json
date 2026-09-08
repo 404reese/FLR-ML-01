@@ -1,0 +1,32 @@
+{
+  "source_predictions": "work/outputs/w05_model_test_predictions.csv",
+  "n_queue_rows": 7115,
+  "n_actionable_rows": 3859,
+  "model_precision_at_50": 0.76,
+  "baseline_precision_at_50": 0.42,
+  "test_base_rate": 0.516514406184118,
+  "reason_code_counts": {
+    "LOW_VISIBILITY": 2429,
+    "LOW_CTR_VISIBLE": 1949,
+    "AGING_REACHABLE": 1543,
+    "WATCH_LIST": 827,
+    "STALE_UPDATE_DUE": 367
+  },
+  "effort_tier_counts": {
+    "none": 3256,
+    "low": 1949,
+    "medium": 1910
+  },
+  "value_tier_counts": {
+    "low": 3559,
+    "medium": 2488,
+    "high": 1068
+  },
+  "needs_senior_review_rows": 697,
+  "monitoring_triggers": {
+    "precision_at_50_floor": 0.6,
+    "base_rate_drift_limit": 0.1,
+    "watch_list_share_limit": 0.25
+  },
+  "notes": "Decision-support queue for human-reviewed content triage. Not a production automation."
+}
